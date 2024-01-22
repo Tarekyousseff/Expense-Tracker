@@ -18,6 +18,8 @@ Widget homeView(BuildContext context) {
                 itemCount: value.getAllExpenseList().length,
                 itemBuilder: (context, index) {
                   return ExpenseTile(
+                      onPressed: (p0) =>
+                          value.deleteExpense(value.getAllExpenseList()[index]),
                       title: value.getAllExpenseList()[index].nameItem,
                       subtitle:
                           value.getAllExpenseList()[index].dateTime.toString(),

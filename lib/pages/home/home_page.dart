@@ -82,12 +82,19 @@ class _HomePageState extends State<HomePage> {
             ));
   }
 
+  void delete(ExpenseItem expenseItem) {
+    Provider.of<ExpenseData>(context).deleteExpense(expenseItem);
+  }
+
   void save() {
-    ExpenseItem newExpense = ExpenseItem(
-        amount: newExpenseAccount.text,
-        nameItem: newExpenseName.text,
-        dateTime: DateTime.now());
-    Provider.of<ExpenseData>(context, listen: false).addNewExpense(newExpense);
+    if (newExpenseAccount.text.isNotEmpty || newExpenseName.text.isNotEmpty) {
+      ExpenseItem newExpense = ExpenseItem(
+          amount: newExpenseAccount.text,
+          nameItem: newExpenseName.text,
+          dateTime: DateTime.now());
+      Provider.of<ExpenseData>(context, listen: false)
+          .addNewExpense(newExpense);
+    }
     Navigator.pop(context);
     clear();
   }
