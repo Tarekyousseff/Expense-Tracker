@@ -2,7 +2,7 @@
 
 
 ## Getting Started
-![Screenshot_2023-10-08-08-14-36](https://github.com/Tarekyousseff/Expense-Tracker/assets/149389639/915936ec-c82b-474c-98d6-2e59279fecb6)
+
 
 
 
