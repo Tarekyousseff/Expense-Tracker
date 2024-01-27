@@ -1,6 +1,5 @@
-# gym_sup
+# Expense-Tracker
 
-A new Flutter project.
 
 ## Getting Started
 
